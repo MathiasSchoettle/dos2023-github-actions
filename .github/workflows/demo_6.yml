@@ -1,0 +1,16 @@
+﻿name: demo_6
+
+on:
+  workflow_dispatch:
+jobs: 
+  job-source:
+    runs-on: ubuntu-latest
+    outputs: 
+      greeting: ${{ steps.step1.output.varInStep1 }}
+    steps:
+      - id: step1
+        run: echo "varInStep1=Hello World" >> $GITHUB_OUTPUT
+  job-desitination:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ jobs.job-source.greeting }}"
