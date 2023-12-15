@@ -1,0 +1,14 @@
+﻿name: demo_3
+
+on:
+  push:
+    branches:
+      - main
+jobs: 
+  run-with-mc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install mc
+        run: sudo apt install mc -y
+      - name: hello
+        run: echo hello
