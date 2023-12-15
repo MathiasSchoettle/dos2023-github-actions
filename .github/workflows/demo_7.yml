@@ -1,0 +1,10 @@
+name: demo_7
+
+on:
+  workflow_dispatch:
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: secret
+        run: echo "${{ secrets.MY_SECRET }}"
