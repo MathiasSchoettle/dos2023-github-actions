@@ -6,7 +6,7 @@ jobs:
   job-source:
     runs-on: ubuntu-latest
     outputs: 
-      greeting: ${{ steps.step1.output.varInStep1 }}
+      greeting: ${{ steps.step1.outputs.varInStep1 }}
     steps:
       - id: step1
         run: echo "varInStep1=Hello World" >> $GITHUB_OUTPUT
