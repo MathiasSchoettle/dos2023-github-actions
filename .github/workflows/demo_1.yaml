@@ -25,4 +25,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello World
-        run: echo Hello World
+        run: echo "boolean_flag ${{ inputs.boolean_flag }}, options ${{ inputs.options }}, text ${{ inputs.text }}, "
