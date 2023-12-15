@@ -13,4 +13,4 @@ jobs:
   job-desitination:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "${{ jobs.job-source.greeting }}"
+      - run: echo "${{ needs.job-source.greeting }}"
