@@ -1,0 +1,13 @@
+﻿name: demo_4
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
