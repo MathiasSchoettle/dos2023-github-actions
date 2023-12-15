@@ -1,0 +1,28 @@
+﻿name: demo_1
+
+on:
+  workflow_dispatch:
+    inputs: 
+      boolean_flag:
+        description: 'a test for a boolean flag'
+        default: true
+        type: boolean
+      options:
+        description: 'a test for a select field input'
+        required: true
+        type: choice
+        options:
+          - 'info'
+          - 'warning'
+          - 'debug'
+      text:
+        description: 'a test for a text input field'
+        required: true
+        type: string
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo Hello World
